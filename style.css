@@ -1,0 +1,331 @@
+
+html{
+  color: #bba0a0;
+}
+body {
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+  box-sizing: border-box;
+}
+
+.containers{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+.containers a:hover, .dropdown:hover .dropbtn {
+  color: #32a0c2;
+}
+ul li{
+  list-style: none;
+}
+
+.dark{
+  padding: 15px;
+  background: #ffece5;
+  color: #666666;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+
+header{
+  background: #ff884d;
+  color: #ffece5;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #32a0c2 3px solid;
+}
+
+header a{
+  color: #666666;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header li{
+  float: left;
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding {
+  float: left;
+}
+
+header #branding h1{
+  margin: 0;
+}
+
+header nav{
+  float: right;
+  margin-top: 10px;
+}
+
+header .highlight, header .current a {
+  color: #32a0c2;
+  font-weight: bold;
+}
+
+header a:hover{
+  color: #cccccc;
+  font-weight: bold;
+}
+
+/* Showcase */
+
+#showcase {
+  min-height: 400px;
+  background:url('https://qtxasset.com/fiercehealthcare/1562973884/GettyImages-898906336.jpg/GettyImages-898906336.jpg?OhHp8.hb4iZbXQ.xHf4.JzCZpWlc56My') no-repeat center;
+  background-size: cover;
+  text-align: center;
+  color: #666666;
+}
+
+#showcase h1{
+  margin-top: 100px;
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+#showcase p{
+  font-size: 20px;
+}
+
+/* Newsletter */
+#newsletter {
+  padding: 15px;
+  color: #ffece5;
+  background: #ff884d;
+}
+
+#newsletter h1{
+  float: left;
+}
+
+#newsletter form {
+  float: right;
+  margin-top: 15px;
+}
+
+#newsletter input[type="email"]{
+  padding: 4px;
+  height: 25px;
+  width: 250px;
+}
+
+.button_1{
+  height: 38px;
+  background: #cccccc;
+  border: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #666666;
+}
+
+#boxes{
+  margin-top: 20px;
+}
+
+#boxes .box{
+  float:left;
+  text-align: center;
+  width: 30%;
+  padding: 10px;
+}
+
+footer{
+  padding: 20px;
+  margin-top: 20px;
+  color: #ffece5;
+  background: #ff884d;
+  text-align: center;
+}
+
+/* Sidebar */
+aside#sidebar {
+  /* float: right; */
+  width: 100%;
+  padding: 5px;
+}
+
+article#main-col{
+  float: left;
+  width: 65%;
+}
+
+aside#sidebar input, aside#sidebar textarea {
+  width: 90%;
+  padding: 5px;
+}
+
+/* Services */
+ul#services li{
+  list-style: none;
+  padding: 20px;
+  border: #cccccc solid 1px;
+  margin-bottom: 5px;
+  background: #ffece5;
+}
+
+ul#services h3{
+  border-bottom: #666666 solid 1px;
+}
+
+@media(max-width: 768px){
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar {
+    float: none;
+    text-align: center;
+    width: 100%;
+    padding: 3px;
+  }
+
+  header {
+    padding-bottom: 20px;
+  }
+
+  #showcase h1 {
+    margin-top: 40px;
+  }
+
+  #newsletter button {
+    display: block;
+    width: 100%;
+  }
+
+  #newsletter form input[type="email"],
+  .contact input,
+  .contact textarea,
+  .contact label{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+
+img{
+  height: 40%;
+  width: 40%;
+}
+.btn:hover{
+  background-color: rgb(241, 6, 6);
+  font-weight: bold;
+  animation-name: button;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.btn {
+  width: 150px;
+  background-color: #32a0c2;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+  
+}
+@keyframes button{
+  0%{
+    transform: translateY(10%);
+  }
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}

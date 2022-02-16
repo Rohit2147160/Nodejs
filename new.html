@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"> </script>
+
+  <link rel="stylesheet" href="signin.css" />
+  <link rel="stylesheet" href="style.css">
+  <title>Dashboard</title>
+  <script src="angular.min.js"></script>
+  <script src="roaster.js"></script>
+</head>
+
+<body>
+  <br>
+  <label for="rowsToBeDisplayed">Display:</label>
+  <input type="number" step="1" min="0" max="10" ng-model="rowlimit" placeholder="Number of rows to be displayed...">
+
+  <div class="dark" ng-controller="roaster_ctrl">
+
+    <h3><i class="fa fa-users"></i> Roaster List</h3>
+    <table class="styled-table">
+      <thead>
+
+        </tr>
+        <tr>
+          <th><input type="search" placeholder="Search Flight No" ng-model="search.flightNO" /></th>
+          <th><input type="search" placeholder="Search Date" ng-model="search.date" /></th>
+          <th><input type="search" placeholder="Search Source" ng-model="search.source" /></th>
+          <th><input type="search" placeholder="Search Destination" ng-model="search.destination" /></th>
+          <th><input type="search" placeholder="Search Fare" ng-model="search.fare" /></th>
+          <th><input type="search" placeholder="Search No of seats" ng-model="search.noofseats" /></th>
+          <th><input type="search" placeholder="Search Airline" ng-model="search.airLineName" /></th>
+        </tr>
+        <tr>
+          <th>Flight No</th>
+          <th>Date</th>
+          <th>Source</th>
+          <th>Destination</th>
+          <th>Fare</th>
+          <th>No of seats</th>
+          <th>Airline</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="flight in r_list | filter:search |limitTo:rowlimit">
+          <td scope="row">{{flight.flightNO}}</td>
+          <td>{{flight.date | date}}</td>
+          <td>{{flight.source | uppercase }}</td>
+          <td>{{flight.destination | lowercase | name}}</td>
+          <td>{{flight.fare | currency}}</td>
+          <td>{{flight.noofseats | unit}}</td>
+          <td>{{flight.airLineName | name }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
